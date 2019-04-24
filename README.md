@@ -1,4 +1,7 @@
 # redis_example
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+An API in Dart using aqueduct framework connected to Redis.
 
 ## Running the Application Locally
 
