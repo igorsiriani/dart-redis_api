@@ -1,34 +1,46 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Aqueduct OpenAPI Client</title>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Redis API">
+    <meta name="author" content="Igor Siriani">
+
+    <title>Redis API</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-<div id="swagger-ui"></div>
-<script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-standalone-preset.js"></script>
-<script src="https://unpkg.com/swagger-ui-dist@3.12.1/swagger-ui-bundle.js"></script>
-<script>
-    window.onload = function() {       
-        const ui = SwaggerUIBundle({
-            spec: {"openapi":"3.0.0","info":{"title":"redis_example","description":"An empty Aqueduct application.","version":"0.0.1"},"servers":[{"url":"http://localhost:8888"}],"paths":{"/example":{"parameters":[]},"/":{"parameters":[]}},"components":{"schemas":{},"responses":{},"parameters":{},"requestBodies":{},"headers":{},"securitySchemes":{},"callbacks":{}}},
-            dom_id: '#swagger-ui',
-            deepLinking: true,
-            presets: [
-                SwaggerUIBundle.presets.apis,
-                SwaggerUIStandalonePreset
-            ],
-            plugins: [
-                SwaggerUIBundle.plugins.DownloadUrl
-            ],
-            layout: "StandaloneLayout",
-        })
-        window.ui = ui
-    }
-</script>
+    <div class="container">
+        <div class="row">
+            <h1>Redis API com Dart</h1>
+        </div>
+        <div class="row">
+            <a>
+                Para acessar as funções da api é recomendado utilizar o Postman.
+            </a>
+        </div>
+        <div class="row">
+            <a>
+                Acesse &nbsp;localhost:8888/redis usando:
+            </a>
+        </div>
+        <div class="row" style="padding-top: 25px;">
+            <ul>
+                <li>GET: para buscar todos;</li>
+                <li>/(alguma key) GET: para buscar apenas um;</li>
+                <li>POST {"key": "value"}: para inserir apenas um;</li>
+                <li>/(alguma key) PUT "value": para alterar um valor;</li>
+                <li>/(alguma key) DELETE: para remover uma entrada.</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>
